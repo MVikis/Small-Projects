@@ -19,9 +19,11 @@ constructor(props){
      render(){
 
         return(
-    <form onSubmit={this.handleSumbit}>
-        <input name="date" onChange={this.FormChange} type="date"></input>
-        <input className="form-button"  value="Create" type="submit"></input>
+    <form className="form-inline" onSubmit={this.handleSumbit}>
+        
+        
+        <input className="form" name="date" onChange={this.FormChange} type="date"></input>
+        <input className="form "  value="Check" type="submit"></input>
     </form>
         )
      }

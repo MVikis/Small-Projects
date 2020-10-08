@@ -1,37 +1,56 @@
-import React, { Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import UserInput from './UserInput'
 import Timer from './Timer'
 import './TimerApp-style.css'
+import summer from './photos/summer.jpg'
+import winter from './photos/winter.jpg'
 
-export default class TimerApp extends Component{
-constructor(){
-    super()
-    this.state={
-        days:0,
-        hours:0,
-        minutes:0,
-        seconds:0,
 
+export default function TimerApp(){
+
+
+const [countDownDate , setCountDownDate] = useState(0)
+
+  const calculateTimeLeft = () => {
+   
+      let difference = new Date(countDownDate) - new Date()
+    let timeLeft = {};
+    if (difference > 0) {
+
+      
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
     }
-}
-calcTime=(date)=>{
-  var d = new Date(date)
-  const totalSeconds = (d - new Date()) / 1000
-  const days = Math.floor(totalSeconds / 3600 / 24)
-  const hours = Math.floor(totalSeconds / 3600) % 24
-  const minutes = Math.floor(totalSeconds / 60) % 60
-  const seconds = Math.floor(totalSeconds) % 60
-this.setState({days,hours,minutes,seconds})
+    
+    return timeLeft;
+  };
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  
+useEffect(() => {
+ 
+    const timer=setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+     
+    }, 1000);
+    // Clear timeout if the component is unmounted
+    return () => clearTimeout(timer);
+  })
 
-     }
+  
 
-    render(){
-
+        
         return(
-           <div>
-               <UserInput Date={this.calcTime}/>
-                <Timer time={this.state}/>
+           <div className="background" style={{backgroundImage: `url(${ summer})` }} >
+               <div className="overlay">
+               
+               <UserInput Date={setCountDownDate}/>
+                <Timer timeLeft={timeLeft}/>
+                </div>
            </div>
         )
-    }
+    
 }

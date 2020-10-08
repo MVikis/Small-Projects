@@ -1,5 +1,32 @@
 .row{
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    margin: auto;
+    flex-wrap: wrap;
+   
+}
+.row>div{
+    margin: 22px;
+}
+.form-inline{
+    justify-content: inherit;
+    width: 50%;
+} 
+.form{
+    width: 25%;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    
+}
+.form-button{
+    font-size: 20x;
+    
+    
+   
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}
+.form-control{
+    
+    
 }
