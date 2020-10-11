@@ -45,7 +45,7 @@ useEffect(() => {
         
         return(
            <div className="background" style={{backgroundImage: `url(${ summer})` }} >
-               <div className="overlay">
+               <div className="overlay"  style={{background:" rgba(255, 255, 255, 0.5)",height:"100vh"}}>
                
                <UserInput Date={setCountDownDate}/>
                 <Timer timeLeft={timeLeft}/>

@@ -5,6 +5,10 @@ import TimerApp from './components/TimerApp/TimerApp';
 import { BrowserRouter as Router,Route,} from "react-router-dom";
 import ToDoApp from './components/ToDoApp/ToDoApp';
 import Nav from './Nav'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faThList, faClock, faPlusCircle, faCheckCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons'
+
+library.add( faThList, faClock, faPlusCircle, faCheckCircle, faMinusCircle)
 
 function App() {
   return (

@@ -22,8 +22,8 @@ constructor(props){
     <form className="form-inline" onSubmit={this.handleSumbit}>
         
         
-        <input className="form" name="date" onChange={this.FormChange} type="date"></input>
-        <input className="form "  value="Check" type="submit"></input>
+        <input className="item" name="date" onChange={this.FormChange} type="date"></input>
+        <input className="form-button flex"  value="Check" type="submit"></input>
     </form>
         )
      }

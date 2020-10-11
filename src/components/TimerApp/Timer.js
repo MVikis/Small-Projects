@@ -45,7 +45,7 @@ export default function Timer(props){
             )
         }
     
-    return  timerComponents.length? Input() : noInput()
+    return timerComponents.length? Input() : noInput()
 
     
 }

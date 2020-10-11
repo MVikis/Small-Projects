@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export default function Form(props){
@@ -18,9 +18,13 @@ const [formInfo, setFormInfo] = useState({name:''})
      return(
         <form className="form-inline" onSubmit={handleSumbit}>
         
-        <input onChange={FormChange} name="text" type="text"></input>
+        <input className="item" onChange={FormChange} name="text" type="text"></input>
         
-        <input className="form "  value="Check" type="submit"></input>
+      <button className="form-button flex fa-secondary" type="submit">
+        <FontAwesomeIcon  icon="plus-circle"></FontAwesomeIcon>
+        </button>
+        
+       
     </form>
      )
 }

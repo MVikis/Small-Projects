@@ -1,4 +1,7 @@
-
+.App-header{
+  
+  background-color: aquamarine;
+}
 :root {
     font-size: 16px;
     font-family: 'Open Sans';
@@ -14,6 +17,11 @@
     background-color: white;
     margin: 0;
     padding: 0;
+  }
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   body::-webkit-scrollbar {
@@ -68,7 +76,7 @@
     transition: var(--transition-speed);
   }
   
-  .nav-link:hover {
+  .nav-link:hover{
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
     color: var(--text-secondary);
@@ -86,11 +94,15 @@
   }
   
   .fa-primary {
-    color: #ff7eee;
+    color: #7ef6ff;
   }
   
   .fa-secondary {
-    color: #df49a6;
+    color: #49a3df;
+  }
+  .fa-third{
+    color: #df496f;
+    
   }
   
   .fa-primary,
@@ -118,6 +130,7 @@
   .logo-text
   {
     display: inline;
+    font-size: small;
     position: absolute;
     left: -999px;
     transition: var(--transition-speed);
@@ -228,7 +241,9 @@
 }
 .form-inline{
     justify-content: inherit;
-    width: 50%;
+    padding: 5px;
+    display:flex;
+   
 } 
 .form{
     width: 25%;
@@ -239,10 +254,19 @@
     
 }
 .form-button{
-    font-size: 20x;
-    
-    
+    padding: 10px;
+    border:none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+   background-color: white;
+  
    
+}
+.icon{ 
+ } 
+.sec{
+  width: 40px;
+    margin:5px;
+    border-radius: 25px;
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
 }
-
