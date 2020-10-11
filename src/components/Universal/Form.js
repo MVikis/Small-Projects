@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export default function Form(props){
-const [formInfo, setFormInfo] = useState({name:''})
+const [formInfo, setFormInfo] = useState()
 
    const FormChange=(event)=>{
     const { value} = event.target
-    setFormInfo({...formInfo, name: value})
+    setFormInfo(value)
      }
    const handleSumbit = (event) => {
        event.preventDefault()

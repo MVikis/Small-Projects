@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default function Nav(){
     return(
        
-
   <nav className="navbar">
     <ul className="navbar-nav">
       <li className="logo">
@@ -38,7 +37,7 @@ export default function Nav(){
       </li>
     
       <li className="nav-item">
-      <Link className="nav-link" to="/Timer">
+      <Link className="nav-link" to="/timer">
         <FontAwesomeIcon size="2x" className="fa-primary svg-inline--fa fa-clock fa-w-16" icon="clock"/>
      
           <span className="link-text">Timer</span>
@@ -47,10 +46,18 @@ export default function Nav(){
       </li>
       
       <li className="nav-item">
-          <Link className="nav-link" to="/ToDo">
+          <Link className="nav-link" to="/todo">
           <FontAwesomeIcon size="2x" className="svg-inline--fa fa- fa-th-list w-16 fa-primary" icon="th-list"/>
          
           <span className="link-text">To Do</span>
+     
+        </Link>
+      </li>
+      <li className="nav-item">
+          <Link className="nav-link" to="/api">
+          <FontAwesomeIcon size="2x" className="svg-inline--fa fa- fa-th-list w-16 fa-primary" icon="globe-africa"/>
+         
+          <span className="link-text">API Nationality</span>
      
         </Link>
       </li>
