@@ -1,6 +1,6 @@
 .App-header{
   
-  background-color: aquamarine;
+  background-color: darkslateblue;
 }
 :root {
     font-size: 16px;
@@ -62,9 +62,7 @@
     width: 100%;
   }
   
-  .nav-item:last-child {
-    margin-top: auto;
-  }
+  
   
   .nav-link {
     display: flex;
@@ -271,7 +269,7 @@
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
 }
 .box{
-
+  padding:10px;
   display: flex;
     align-items: center;
     flex-direction: column;
@@ -279,6 +277,7 @@
   background-color: var(--bg-primary);
 }
 .box-item{
+  padding:10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -289,4 +288,16 @@
 }
 .box-item>h4{
   padding: 5px;
+}
+.background{
+   height: 100vh;
+   background-repeat: no-repeat;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+
+  
+}
+.overlay{
+  background: rgba(255, 255, 255, 0.5);
 }

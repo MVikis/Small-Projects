@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import UserInput from './UserInput'
 import Timer from './Timer'
 import './TimerApp-style.css'
-import summer from './photos/summer.jpg'
-import winter from './photos/winter.jpg'
+import summer from 'C:/Users/lisel/source/repos/MVikis/Date-Timer/date-timer/src/photos/summer.jpg'
+
 
 
 export default function TimerApp(){
@@ -44,7 +44,7 @@ useEffect(() => {
 
         
         return(
-           <div className="background" style={{backgroundImage: `url(${ summer})` }} >
+           <div className="background" style={{backgroundImage: `url(${ summer})`, backgroundSize:'cover' }} >
                <div className="overlay"  style={{background:" rgba(255, 255, 255, 0.5)",height:"100vh"}}>
                
                <UserInput Date={setCountDownDate}/>

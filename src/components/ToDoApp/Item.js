@@ -8,7 +8,7 @@ export default function Item(props){
     return(
         <div className="form-inline">
             
-            <div className="item">{props.item.name}</div>
+            <div className="item">{props.item}</div>
             <button onClick={props.completeItem} className="form-button flex ">
                 <FontAwesomeIcon className="fa-secondary icon" icon="check-circle" />
             </button>

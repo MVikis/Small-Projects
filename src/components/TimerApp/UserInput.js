@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class Form extends Component{
 constructor(props){
@@ -23,7 +24,9 @@ constructor(props){
         
         
         <input className="item" name="date" onChange={this.FormChange} type="date"></input>
-        <input className="form-button flex"  value="Check" type="submit"></input>
+        <button className="form-button flex fa-secondary" type="submit">
+        <FontAwesomeIcon  icon="calendar-day"></FontAwesomeIcon>
+        </button>
     </form>
         )
      }
