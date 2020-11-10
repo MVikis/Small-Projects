@@ -30,14 +30,14 @@ const ReturnFlag=(country)=>{
 
     return(
         <div className="overlay">
-            <h2 >Name Nationalize</h2>
+            <h3 >Name Nationalize</h3>
            <Form AddItem={Get}/>
            
         
 
            {data.name!== undefined?
            <div>
-           <h3 className="logo">{data.name}</h3>
+           <h3 className="name-style">{data.name}</h3>
            <div className="flex">
         
            {data.country.map((country, index )=>

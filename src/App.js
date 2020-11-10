@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './styles.css'
+import './style.css'
 import TimerApp from './components/TimerApp/TimerApp';
 import { BrowserRouter as Router,Route,} from "react-router-dom";
 import ToDoApp from './components/ToDoApp/ToDoApp';

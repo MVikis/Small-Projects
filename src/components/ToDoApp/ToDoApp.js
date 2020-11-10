@@ -22,10 +22,10 @@ const DeleteItem=(name)=>{
 }
 
     return(
-        <div className="background" style={{backgroundImage: `url(${ ToDo})` }} >
+        <div className="background" >
         <div className="overlay">
             <div>
-            <h3 className="">To Do List</h3>
+            <h3 >To Do List</h3>
             <Form AddItem={AddItem}/>
             </div>
             {items.length > 0 ? items.map((item, index )=> (<Item key={index} name={item} item={item} completeItem={()=>CompleteItem(item)} deleteItem={()=>DeleteItem(item)} />))

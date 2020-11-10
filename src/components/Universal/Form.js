@@ -16,7 +16,7 @@ const [formInfo, setFormInfo] = useState()
      }
 
      return(
-        <form className="form-inline" onSubmit={handleSumbit}>
+        <form autoComplete="off" className="form-inline" onSubmit={handleSumbit}>
         
         <input className="item" onChange={FormChange} name="text" type="text"></input>
         
