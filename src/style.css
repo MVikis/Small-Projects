@@ -20,8 +20,9 @@
   }
  
   h3{
-    color: var(--text-secondary);
+    
     font-size: 5vh;
+    font-weight: 200;
   }
   .flex{
     flex-wrap: wrap;
@@ -47,7 +48,8 @@
     padding: 1rem;
   }
 .navbar {
-  font-weight: 500;
+  z-index: 4;
+  font-weight: 200;
     overflow: hidden;
     position: fixed;
     background-color: var(--bg-primary);
@@ -214,6 +216,7 @@
     margin: 22px;
 }
 .form-inline{
+  transition: 1s ease;
     justify-content: inherit;
     padding: 5px;
     display:flex;
@@ -222,23 +225,14 @@
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
-.item:focus{
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  text-align: center;
-  width: 250px;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border:none;
-  padding: 10px;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
 
-}
 .item{
   background-color: var(--bg-primary);
   color: var(--text-primary);
   text-align: center;
-  width: 250px;
+  max-width: 250px;
+    width: 100%;
+    min-width: 200px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border:none;
@@ -303,3 +297,24 @@
 
   
 }
+.item-appear{
+    opacity: 0;
+  }
+  .item-appear-active{
+    opacity: 1;
+    transition: 500ms ease-in;
+  }
+  .item-enter {
+    opacity: 0;
+  }
+  .item-enter-active {
+    opacity: 1;
+    transition: 500ms ease-in;
+  }
+  .item-exit {
+    opacity: 1;
+  }
+  .item-exit-active {
+    opacity: 0;
+    transition: 500ms ease-in;
+  }

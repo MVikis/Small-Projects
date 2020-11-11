@@ -6,7 +6,7 @@ import './TimerApp-style.css'
 
 export default function TimerApp(){
 
-
+  
 const [countDownDate , setCountDownDate] = useState(0)
 
   const calculateTimeLeft = () => {
@@ -46,7 +46,9 @@ useEffect(() => {
                <div className="overlay" style={{height:'100vh'}} >
                
                <UserInput Date={setCountDownDate}/>
-                <Timer timeLeft={timeLeft}/>
+               
+                <Timer ShowTime={countDownDate} timeLeft={timeLeft}/>
+                
                 </div>
            </div>
         )

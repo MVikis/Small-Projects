@@ -11,3 +11,4 @@
 [1011/155046.775:ERROR:process_reader_win.cc(151)] SuspendThread: Åtkomst nekad. (0x5)
 [1011/155046.775:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
 [1011/155046.775:ERROR:exception_snapshot_win.cc(99)] thread ID 15240 not found in process
+[1111/114309.163:ERROR:directory_reader_win.cc(43)] FindFirstFile: Det går inte att hitta sökvägen. (0x3)
