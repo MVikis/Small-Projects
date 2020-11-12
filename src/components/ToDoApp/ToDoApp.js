@@ -5,6 +5,7 @@ import './ToDo.css'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+
 export default function ToDoApp(){
 
     const [items, setItems] = useState([])
@@ -67,7 +68,7 @@ else setClass('done-items done-items-close')
            
            
             </div>
-            
+          
             </div>
        
         

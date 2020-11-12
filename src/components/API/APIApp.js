@@ -8,6 +8,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 
+
 export default function APIApp(){
 
     const [data,setData] = useState({name:'', country:[]});
@@ -58,7 +59,7 @@ console.log(data)
          
             </div>
         
-        
+       
         </div>
     )
 }

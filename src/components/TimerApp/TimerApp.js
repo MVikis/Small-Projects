@@ -4,6 +4,7 @@ import Timer from './Timer'
 import './TimerApp-style.css'
 
 
+
 export default function TimerApp(){
 
   
@@ -50,6 +51,7 @@ useEffect(() => {
                 <Timer ShowTime={countDownDate} timeLeft={timeLeft}/>
                 
                 </div>
+         
            </div>
         )
     

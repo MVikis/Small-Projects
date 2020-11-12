@@ -8,7 +8,7 @@ export default function Nav(){
   <nav className="navbar">
     <ul className="navbar-nav">
       <li className="logo">
-        <a href="#" className="nav-link">
+      <Link className="nav-link" to="/smallprojects">
           <span className="link-text logo-text">Small Projects</span>
           <svg
             aria-hidden="true"
@@ -33,7 +33,7 @@ export default function Nav(){
               ></path>
             </g>
           </svg>
-        </a>
+        </Link>
       </li>
     
       <li className="nav-item">
