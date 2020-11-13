@@ -66,17 +66,7 @@
     align-items: center;
   }
   
-  body::-webkit-scrollbar {
-    width: 0.25rem;
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #1e1e24;
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background: #7ef6ff;
-  }
+ 
   
   main {
     margin-left: 5rem;
