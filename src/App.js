@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './style.css'
 import TimerApp from './components/TimerApp/TimerApp';
-import { BrowserRouter as Router,Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router,HashRouter,Route, Switch} from "react-router-dom";
 import ToDoApp from './components/ToDoApp/ToDoApp';
 import Nav from './Nav'
 import Home from './components/Universal/Home'
@@ -18,7 +18,7 @@ library.add( faThList, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGl
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
     <div className="App">
     <Nav/>
       <header className="App-header">
@@ -32,7 +32,7 @@ function App() {
 
       </header>
     </div>
-    </Router>
+    </HashRouter>
   );
 }
 
