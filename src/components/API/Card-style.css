@@ -33,17 +33,17 @@
 }
 
 
-.card:hover img{
+#api .card:hover img{
     top: -20px;
     left: -30px;
 }
-.card:hover .circle{
+#api .card:hover .circle{
     clip-path:circle(200px at 80% -20%);
 }
-.card:hover .card-container{
+#api .card:hover .card-container{
     bottom: 10px;
 }
-.card:hover .color-flex{
+#api .card:hover .color-flex{
     opacity: 1;
 }
 .card-overlay{
