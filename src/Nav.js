@@ -8,7 +8,7 @@ export default function Nav(){
   <nav className="navbar">
     <ul className="navbar-nav">
       <li className="logo">
-      <Link className="nav-link" to="/smallprojects">
+      <Link className="nav-link" to="/Small-Projects">
           <span className="link-text logo-text">Small Projects</span>
           <svg
             aria-hidden="true"

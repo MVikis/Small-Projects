@@ -13,6 +13,7 @@ import Info from './components/Universal/Info';
 
 
 
+
 library.add( faThList, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGlobeAfrica, faCalendarDay)
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     <Nav/>
       <header className="App-header">
       
-       <Route path="/smallprojects" component={Home}/>
+       <Route path="/Small-Projects" component={Home}/>
       <Route path="/timer" component={TimerApp}/>
       <Route path="/todo" component={ToDoApp}/>
       <Route path="/api" component={APIApp}/>
