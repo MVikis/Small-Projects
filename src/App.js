@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './style.css'
 import TimerApp from './components/TimerApp/TimerApp';
-import { BrowserRouter as Router,Route,Redirect} from "react-router-dom";
+import { BrowserRouter as Router,Route, Switch} from "react-router-dom";
 import ToDoApp from './components/ToDoApp/ToDoApp';
 import Nav from './Nav'
 import Home from './components/Universal/Home'
@@ -22,12 +22,12 @@ function App() {
     <div className="App">
     <Nav/>
       <header className="App-header">
-      
-       <Route path="/Small-Projects" component={Home}/>
-      <Route path="/timer" component={TimerApp}/>
-      <Route path="/todo" component={ToDoApp}/>
-      <Route path="/api" component={APIApp}/>
-     
+      <Switch>
+       <Route path="/Small-Projects" exact component={Home}/>
+      <Route path="/Small-Projects/timer" component={TimerApp}/>
+      <Route path="/Small-Projects/todo" component={ToDoApp}/>
+      <Route path="/Small-Projects/api" component={APIApp}/>
+      </Switch>
      <Info/> 
 
       </header>
