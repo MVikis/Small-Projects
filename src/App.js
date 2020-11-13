@@ -18,15 +18,16 @@ library.add( faThList, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGl
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter
+    basename='/'>
     <div className="App">
     <Nav/>
       <header className="App-header">
       <Switch>
-       <Route path="/Small-Projects" exact component={Home}/>
-      <Route path="/Small-Projects/timer" component={TimerApp}/>
-      <Route path="/Small-Projects/todo" component={ToDoApp}/>
-      <Route path="/Small-Projects/api" component={APIApp}/>
+       <Route path="/" exact component={Home}/>
+      <Route path="/timer" component={TimerApp}/>
+      <Route path="/todo" component={ToDoApp}/>
+      <Route path="/api" component={APIApp}/>
       </Switch>
      <Info/> 
 

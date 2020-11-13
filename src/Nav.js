@@ -8,7 +8,7 @@ export default function Nav(){
   <nav className="navbar">
     <ul className="navbar-nav">
       <li className="logo">
-      <Link className="nav-link" to="/Small-Projects">
+      <Link className="nav-link" to="/">
           <span className="link-text logo-text">Small Projects</span>
           <svg
             aria-hidden="true"
@@ -37,7 +37,7 @@ export default function Nav(){
       </li>
     
       <li className="nav-item">
-      <Link className="nav-link" to="/Small-Projects/timer">
+      <Link className="nav-link" to="/timer">
         <FontAwesomeIcon size="2x" className="fa-primary svg-inline--fa fa-clock fa-w-16" icon="clock"/>
      
           <span className="link-text">Timer</span>
@@ -46,7 +46,7 @@ export default function Nav(){
       </li>
       
       <li className="nav-item">
-          <Link className="nav-link" to="/Small-Projects/todo">
+          <Link className="nav-link" to="/todo">
           <FontAwesomeIcon size="2x" className="svg-inline--fa fa- fa-th-list w-16 fa-primary" icon="th-list"/>
          
           <span className="link-text">To Do</span>
@@ -54,7 +54,7 @@ export default function Nav(){
         </Link>
       </li>
       <li className="nav-item">
-          <Link className="nav-link" to="/Small-Projects/api">
+          <Link className="nav-link" to="/api">
           <FontAwesomeIcon size="2x" className="svg-inline--fa fa- fa-th-list w-16 fa-primary" icon="globe-africa"/>
          
           <span className="link-text">API Nationality</span>
