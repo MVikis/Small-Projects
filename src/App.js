@@ -10,10 +10,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faThList, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGlobeAfrica, faCalendarDay } from '@fortawesome/free-solid-svg-icons'
 import APIApp from './components/API/APIApp';
 import Info from './components/Universal/Info';
-
-
-
-
 library.add( faThList, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGlobeAfrica, faCalendarDay)
 
 function App() {
