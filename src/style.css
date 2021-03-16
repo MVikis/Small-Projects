@@ -1,9 +1,13 @@
 .App{
-  overflow-x: hidden;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  overflow: hidden;
 }
 .App-header{
+  position: relative;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: auto;
   font-weight: 200;
-  background-color: #055571;
 }
 :root {
     font-size: 16px;
@@ -23,7 +27,6 @@
   }
  
   h3{
-    
     font-size: 5vh;
     font-weight: 200;
   }
@@ -39,19 +42,18 @@
 
   }
   .home-title{
-    font-size: 5vw;
+    font-size: 50px;
     margin:0;
     position: relative;
     z-index: 3;
   }
   .home-icon{
     z-index: 2;
-     width: 40vw;
+     width: 500px;
     position: relative;
     animation: icon-animation 2s ease-in-out;
     transition-delay: 1s;
     animation-iteration-count: initial;
-    height: auto;
   }
   @keyframes icon-animation {
     from {
@@ -71,6 +73,32 @@
   main {
     margin-left: 5rem;
     padding: 1rem;
+  }
+  .page {
+    
+  }
+  
+  .page-enter {
+    opacity: 0;
+   
+  }
+  
+  .page-enter-active {
+    opacity: 1;
+    
+    transition: opacity 400ms,  left 400ms;
+  }
+  .page-exit {
+    opacity: 1;
+   
+    
+  }
+  
+  .page-exit-active {
+    opacity: 0;
+   
+    transition: opacity 400ms,  left 400ms;
+
   }
 .navbar {
   z-index: 15;
@@ -142,7 +170,54 @@
   .fa-secondary {
     transition: var(--transition-speed);
   }
-  
+  .glass {
+    margin:10px;
+    overflow: hidden;
+    background:#7ef6ff;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+   border-radius: 2em;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+  }
+
+  .glass-img-container{
+    position: relative;
+    bottom: 0;
+   opacity: 0.7;
+    height: 200px;
+    width: 100%;
+  }
+  .todo-list{
+    overflow: auto;
+    height: 400px;
+  }
+  ::-webkit-scrollbar{
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+    background:#7ef6ff;
+  }
+  .glass-img-container>img{  
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .glass-img-container>span{
+    color: crimson;
+    font-weight: 600;
+    font-size: 60px;
+    position: absolute;
+    bottom: 5px;
+    left: 10px
+  }
   .logo {
     font-weight: bold;
     text-transform: uppercase;
@@ -170,7 +245,38 @@
   }
   
   .navbar:hover .logo svg {
+    padding: 10px;
+    font-size: 50px;
     transform: rotate(-180deg);
+  }
+     /* Title component */
+  .title-container{
+    color:#49a3df;
+    display: flex;
+    max-width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+  }
+  .title-container > svg{
+    font-size: 54px;
+    z-index: 2;
+  }
+  .title-text{
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .title-text::after{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 2px;
+    background-color: #7ef6ff;
+    left: 0;
+
   }
   
   /* Small screens */
@@ -208,7 +314,9 @@
       
     }
   }
-  
+ 
+
+
   /* Large screens */
   @media only screen and (min-width: 600px) {
     .navbar {
@@ -251,10 +359,14 @@
     flex-wrap: wrap;
    
 }
-.row>div{
-    margin: 22px;
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .form-inline{
+  height: min-content;
   transition: 1s ease;
     justify-content: inherit;
     padding: 5px;
@@ -265,20 +377,54 @@
   color: var(--text-primary);
 }
 
+
+.todo-list-item{
+  border-radius: 10px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  display: flex;
+  padding: 10px 20px;
+  font-weight: 100;
+  font-size: 20px;
+  width: 300px;
+  transition: .5s;
+}
+
+.todo-list-item:hover{
+background-color: #fff;
+}
+.todo-list-item > div{
+  width: 200px;
+  overflow: hidden;
+}
+.todo-list-item > span{
+  width: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.todo-list-item > span:hover{
+  transform: scale(1.2);
+}
+
 .item{
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: whitesmoke;
+    font-weight: 100;
+    font-size: 20px;
   text-align: center;
   max-width: 250px;
     width: 100%;
     min-width: 200px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  border:none;
   padding: 10px;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
-
+ border:none;
+ outline: none;
+ box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
 }
+
 .form{
   
     width: 25%;
@@ -289,8 +435,11 @@
     
 }
 .form-button{
-  background-color: var(--bg-primary);
+  cursor: pointer;
+  font-size: 20px;
+  background-color: whitesmoke;
     padding: 10px;
+    outline: none;
     border:none;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -298,8 +447,7 @@
   
    
 }
-.icon{ 
- } 
+
 .sec{
   width: 40px;
     margin:5px;
@@ -409,3 +557,33 @@ font-size: 16px;
   .right-fade-exit-done{
     opacity: 0;
   }
+  .popup {
+    position: absolute;
+    left: 0;
+    top: -60px;
+    transform: translate3d(0, -50%, 0);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    background: none;
+    border-radius: 100px;
+    width: 100%;
+  }
+  
+  .popup:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+    background: #fff;
+    position: absolute;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    bottom: -10px;
+    left: calc(50% - 10px);
+  }
+  
+  .inner {
+    padding: 30px 0;
+    background: #fff;
+    border-radius: 100px;
+  }
+  

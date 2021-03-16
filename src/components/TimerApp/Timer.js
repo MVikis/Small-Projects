@@ -1,53 +1,27 @@
 import React, { useState } from 'react'
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
-export default function Timer(props){
+export const Timer = ({timeLeft, arrayOfTime})=>{
 
-    const timerComponents = [];
-    Object.keys(props.timeLeft).forEach((interval) => {
-      if (!props.timeLeft[interval]) {
-        return;
-      }
     
-      timerComponents.push(
-        <span>
-          {props.timeLeft[interval]} {interval}{" "}
-        </span>
-      );
-    });
    
      
-    
-    return (  
-    <CSSTransition
-      in={props.timeLeft!=0}
-      timeout={1000}
-      classNames="item">
-        <div className="row">
-        
-    <div>
-    <p>{props.timeLeft.days}</p>
-    <span>days</span>
-    </div>
-   
-    <div>
-    <p>{props.timeLeft.hours}</p>
-    <span>hours</span>
-    </div>
-     <div>
-    <p>{props.timeLeft.minutes}</p>
-    <span>minutes</span>
-    </div>
-     <div>
-    <p>{props.timeLeft.seconds}</p>
-    <span>seconds</span>
-    </div>
  
-
-</div>
-</CSSTransition>
-    )
+    return (  
+      <TransitionGroup component='div' className="row">
+        {arrayOfTime.map((time, index) =>
+        <CSSTransition 
+        in={timeLeft!=0}
+        timeout={500}
+        classNames="item">
+           <div key={index} className="time-container">
+           <p>{timeLeft[time]}</p>
+           <span>{time}</span>
+           </div>
+           </CSSTransition>
+        )}
+        </TransitionGroup>)
 
     
 }

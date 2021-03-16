@@ -7,6 +7,21 @@
   align-items: center;
   justify-content: center;
 }
+.time-container{
+    margin: 5px;
+    width: 70px;
+    padding: 10px;
+    color: white;
+    background-color: #49a3df;
+    border-radius: 10px;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
 
 p{
     font-size: 4rem;

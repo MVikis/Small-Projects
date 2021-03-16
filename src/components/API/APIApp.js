@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Form from 'C:/Users/lisel/source/repos/MVikis/Date-Timer/date-timer/src/components/Universal/Form.js'
+import Form from '../Universal/Form'
 import ReactCountryFlag from "react-country-flag"
 import {countries} from 'country-data';
 import Card from './Card'
 import './Card-style.css'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Title } from '../Universal/Title';
 
 
 
@@ -31,15 +32,12 @@ const ReturnFlag=(country)=>{
   <ReactCountryFlag countryCode={country.country_id} svg/>
  )
 }
-console.log(data)
+
     return(
         <div id="api" className="overlay">
-            <h3 >Name Nationalize</h3>
+          
            <Form AddItem={Get}/>
-           
-        
 
-           
            <div>
                <CSSTransition in={foundData} timeout={{ appear: 1000, enter:1000, exit: 300 }} classNames="item">
                <h3 className="name-style">{data.name}</h3>

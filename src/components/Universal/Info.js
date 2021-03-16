@@ -28,7 +28,7 @@ export default function Info(){
                 <h3><FontAwesomeIcon icon="clock"/> Timer</h3>
             The timer application does what you think it would, it takes a date from the
             user and gives the countdown to that date in real time.
-            <h3><FontAwesomeIcon icon="th-list"/> To-do list</h3>
+            <h3><FontAwesomeIcon icon="clipboard-list"/> To-do list</h3>
             A to-do list where you can add items the list, delete them, or add them do your
             done-items list.
             <h3><FontAwesomeIcon icon="globe-africa"/> nationalize.io</h3>

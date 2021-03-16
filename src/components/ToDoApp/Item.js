@@ -2,19 +2,22 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-export default function Item(props){
+export const Item = ({item, completeItem, deleteItem}) => {
 
     
     return(
         <div className="form-inline">
             
-            <div className="item">{props.item}</div>
-            <button onClick={props.completeItem} className="form-button flex ">
+            <div className="todo-list-item">
+              <div>{item}</div>  
+            <span onClick={completeItem} >
                 <FontAwesomeIcon className="fa-secondary icon" icon="check-circle" />
-            </button>
-            <button onClick={props.deleteItem} className="form-button sec flex ">
+            </span>
+            <span onClick={deleteItem} >
                 <FontAwesomeIcon className="fa-third icon" icon="minus-circle" />
-            </button>
+            </span>
+            </div>
+          
         </div>
         
     )

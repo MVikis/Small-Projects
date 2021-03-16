@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import UserInput from './UserInput'
-import Timer from './Timer'
+import {Timer} from './Timer'
 import './TimerApp-style.css'
-
-
 
 export default function TimerApp(){
 
@@ -39,17 +37,18 @@ useEffect(() => {
     return () => clearTimeout(timer);
   })
 
-  
+  var arrayOfTime = []
+  Object.keys(timeLeft).map((key, index) => {
+    const myItem = arrayOfTime.push(key)
+
+  })
 
         
         return(
            <div className="background">
                <div className="overlay" style={{height:'100vh'}} >
-               
-               <UserInput Date={setCountDownDate}/>
-               
-                <Timer ShowTime={countDownDate} timeLeft={timeLeft}/>
-                
+                <UserInput Date={setCountDownDate}/>
+                <Timer ShowTime={countDownDate} arrayOfTime={arrayOfTime}  timeLeft={timeLeft}/>
                 </div>
          
            </div>

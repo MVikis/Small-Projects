@@ -47,7 +47,7 @@ export default function Nav(){
       
       <li className="nav-item">
           <Link className="nav-link" to="/todo">
-          <FontAwesomeIcon size="2x" className="svg-inline--fa fa- fa-th-list w-16 fa-primary" icon="th-list"/>
+          <FontAwesomeIcon size="2x" className="svg-inline--fa fa- fa-th-list w-16 fa-primary" icon="clipboard-list"/>
          
           <span className="link-text">To Do</span>
      
