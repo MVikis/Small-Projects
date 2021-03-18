@@ -11,8 +11,10 @@ const [formInfo, setFormInfo] = useState()
      }
    const handleSumbit = (event) => {
        event.preventDefault()
-      props.AddItem(formInfo)
-       
+       if(formInfo!=undefined)
+       props.AddItem(formInfo)
+      else
+       alert('Please enter a value')
      }
 
      return(

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import './style.css'
 import TimerApp from './components/TimerApp/TimerApp';
@@ -7,11 +7,11 @@ import {ToDoApp} from './components/ToDoApp/ToDoApp';
 import Nav from './Nav'
 import Home from './components/Universal/Home'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faClipboardList, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGlobeAfrica, faCalendarDay } from '@fortawesome/free-solid-svg-icons'
+import { faClipboardList,faInfo, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGlobeAfrica, faCalendarDay } from '@fortawesome/free-solid-svg-icons'
 import APIApp from './components/API/APIApp';
 import Info from './components/Universal/Info';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-library.add(faClipboardList, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGlobeAfrica, faCalendarDay)
+import {  CSSTransition } from 'react-transition-group';
+library.add(faClipboardList,faInfo, faClock, faPlusCircle, faCheckCircle, faMinusCircle, faGlobeAfrica, faCalendarDay)
 
 const paths = [
   {
@@ -29,6 +29,8 @@ const paths = [
 ]
 
 function App() {
+
+  const [showInfo, setShowInfo] = useState(true);
   return (
     <HashRouter
     basename='/'>
@@ -46,16 +48,16 @@ function App() {
               classNames="page"
               unmountOnExit
             >
-          <div className="page">
-                    <Component />
+          <div className="background">
+          <Info info={showInfo} setShowInfo={setShowInfo}/>
+                 {showInfo&& <Component />}  
                   </div>
             </CSSTransition>
           )}
         </Route>
             )}
       
-     
-     <Info/> 
+  
 
       </header>
     </div>

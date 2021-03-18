@@ -2,29 +2,27 @@ import React, { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function Info(){
+export default function Info({info, setShowInfo}){
 
-    const [showButton, setShowButton] = useState(true);
-    const [showMessage, setShowMessage] = useState(false);
    
    
     return(
         <div className="info">
             <CSSTransition
             timeout={{ enter:1000, exit: 300 }}
-            in={showButton}
-            
+            in={info}
             classNames="right-fade">
-            <div className="done-item" onClick={()=>setShowMessage(true)} >Info</div>
+            <div className="done-item" onClick={()=>setShowInfo(false)} >
+                <FontAwesomeIcon icon="info"/>
+            </div>
             </CSSTransition>
             <CSSTransition
             unmountOnExit
-            onEnter={() => setShowButton(false)}
-            onExited={() => setShowButton(true)}
             timeout={{  enter:1000, exit: 300 }}
-            in={showMessage}
+            in={!info}
             classNames="right-fade">
-            <span onClick={()=>setShowMessage(false)} >
+                <div  onClick={()=>setShowInfo(true)} className="info-overlay ">
+            <span >
                 <h3><FontAwesomeIcon icon="clock"/> Timer</h3>
             The timer application does what you think it would, it takes a date from the
             user and gives the countdown to that date in real time.
@@ -35,6 +33,7 @@ export default function Info(){
             Nationalize.io predicts the nationality of a person given their name. 
             
             </span>
+            </div>
             </CSSTransition>
             
             

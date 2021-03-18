@@ -28,21 +28,18 @@ const DeleteItem=(name)=>{
 
 
     return(
-        <div className="background" >
- 
-        <div className="overlay">
-            <div>
-            <h3 >To Do List</h3>
+        <div className="overlay flex">
+           
+            <div className="home-title">
+                 <h2> <span>To Do List</span></h2>
+                 </div>
             <Form AddItem={AddItem}/>
-            </div>
+            
             <div className="row">
             <Todo items={items} DeleteItem={DeleteItem} CompleteItem={CompleteItem}/>
             <DoneList doneItems={doneItems}/>
             </div>
             </div>
-         
-       </div>
-        
     )
 }
 

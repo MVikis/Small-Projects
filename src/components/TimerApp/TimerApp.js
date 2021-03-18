@@ -45,13 +45,16 @@ useEffect(() => {
 
         
         return(
-           <div className="background">
-               <div className="overlay" style={{height:'100vh'}} >
+           
+               <div className="overlay flex">
+                  <div className="home-title">
+                 <h2><span>Timer</span></h2>
+                 </div>
                 <UserInput Date={setCountDownDate}/>
                 <Timer ShowTime={countDownDate} arrayOfTime={arrayOfTime}  timeLeft={timeLeft}/>
                 </div>
          
-           </div>
+           
         )
     
 }

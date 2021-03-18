@@ -1,11 +1,15 @@
 .App{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .App-header{
+  padding-bottom: 80px;
+  height: 100%;
+  padding-left: 0;
   position: relative;
   min-height: 100vh;
-  max-width: 900px;
   margin: auto;
   font-weight: 200;
 }
@@ -36,16 +40,24 @@
     position: absolute;
     right: 0;
     width: 100%;
-    clip-path: circle(50% at 100% 50% );
-    height: 100vh;
+    clip-path: circle(600px at right 1000px);
+    height: 100%;
     z-index: 1;
 
   }
   .home-title{
-    font-size: 50px;
-    margin:0;
-    position: relative;
-    z-index: 3;
+    max-width: 400px;
+  }
+  .home-title h2{
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 500;
+  }
+  .home-title h2 span{
+    color: crimson;
+    font-size: 1em;
+    font-weight: 900;
   }
   .home-icon{
     z-index: 2;
@@ -286,9 +298,6 @@
       width: 100vw;
       height: 5rem;
     }
-    .home-title{
-      font-size: 50px;
-    }
     .home-icon{
       width: 300px;
     }
@@ -308,17 +317,21 @@
     main {
       margin: 0;
     }
-    .info>span{
-      justify-content: flex-start;
-      padding-bottom:50px;
-      
+    
+    .home-title h2 span{
+      font-size: 0.5em;
     }
+    
   }
  
 
 
   /* Large screens */
   @media only screen and (min-width: 600px) {
+    .App-header{
+      padding-bottom: 0px;
+      padding-left: 80px;
+    }
     .navbar {
       top: 0;
       width: 5rem;
@@ -476,6 +489,7 @@ background-color: #fff;
   padding: 5px;
 }
 .background{
+  height: 100%;
    min-height: 100vh;
    background-repeat: no-repeat;
   width: 100%;
@@ -508,28 +522,39 @@ background-color: #fff;
 
 
   .info>.done-item{
+    cursor: pointer;
+    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3) );
     z-index: 10;
     position: fixed;
    right:2vh;
-   bottom: 100px;
-    max-width: 100px;
+   top: 10px;
+    height: 30px;
+    width: 30px;
   }
-  .info>span{
+  .info>.done-item>svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .info>.info-overlay{
     z-index: 10;
     background-color:black;
-    padding-left:5vh;
-    padding-right: 5vh;
+    height: 100%;
+    width: 100%;
+    top:0vh;
+   right:0vh;
+   position: absolute;
+  }
+  .info-overlay>span{
+margin: auto;
 font-size: 16px;
-  height: 100%;
+ max-width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
     color:var(--text-primary);
-   top:0vh;
-   right:0vh;
-    position: absolute;
-   
   }
   
 
