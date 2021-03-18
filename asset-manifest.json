@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/Small-Projects/static/css/main.c0b78889.chunk.css",
-    "main.js": "/Small-Projects/static/js/main.3ce1dc57.chunk.js",
-    "main.js.map": "/Small-Projects/static/js/main.3ce1dc57.chunk.js.map",
+    "main.css": "/Small-Projects/static/css/main.4e7c6916.chunk.css",
+    "main.js": "/Small-Projects/static/js/main.a0a17468.chunk.js",
+    "main.js.map": "/Small-Projects/static/js/main.a0a17468.chunk.js.map",
     "runtime-main.js": "/Small-Projects/static/js/runtime-main.5c037619.js",
     "runtime-main.js.map": "/Small-Projects/static/js/runtime-main.5c037619.js.map",
-    "static/js/2.02a264a1.chunk.js": "/Small-Projects/static/js/2.02a264a1.chunk.js",
-    "static/js/2.02a264a1.chunk.js.map": "/Small-Projects/static/js/2.02a264a1.chunk.js.map",
+    "static/js/2.523c9cdc.chunk.js": "/Small-Projects/static/js/2.523c9cdc.chunk.js",
+    "static/js/2.523c9cdc.chunk.js.map": "/Small-Projects/static/js/2.523c9cdc.chunk.js.map",
     "index.html": "/Small-Projects/index.html",
-    "precache-manifest.ed9e4929f096b4311fafaca0577c9923.js": "/Small-Projects/precache-manifest.ed9e4929f096b4311fafaca0577c9923.js",
+    "precache-manifest.8282133773080de1ebdc6aae50d2874f.js": "/Small-Projects/precache-manifest.8282133773080de1ebdc6aae50d2874f.js",
     "service-worker.js": "/Small-Projects/service-worker.js",
-    "static/css/main.c0b78889.chunk.css.map": "/Small-Projects/static/css/main.c0b78889.chunk.css.map",
-    "static/js/2.02a264a1.chunk.js.LICENSE.txt": "/Small-Projects/static/js/2.02a264a1.chunk.js.LICENSE.txt",
-    "static/media/Small-Projects.svg": "/Small-Projects/static/media/Small-Projects.8dbdeaa0.svg"
+    "static/css/main.4e7c6916.chunk.css.map": "/Small-Projects/static/css/main.4e7c6916.chunk.css.map",
+    "static/js/2.523c9cdc.chunk.js.LICENSE.txt": "/Small-Projects/static/js/2.523c9cdc.chunk.js.LICENSE.txt",
+    "static/media/Small-Projects.svg": "/Small-Projects/static/media/Small-Projects.8dbdeaa0.svg",
+    "static/media/done-list.jpg": "/Small-Projects/static/media/done-list.454f3d4d.jpg",
+    "static/media/todo.jpg": "/Small-Projects/static/media/todo.40944277.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5c037619.js",
-    "static/js/2.02a264a1.chunk.js",
-    "static/css/main.c0b78889.chunk.css",
-    "static/js/main.3ce1dc57.chunk.js"
+    "static/js/2.523c9cdc.chunk.js",
+    "static/css/main.4e7c6916.chunk.css",
+    "static/js/main.a0a17468.chunk.js"
   ]
 }
